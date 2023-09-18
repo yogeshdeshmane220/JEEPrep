@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/lottie_back">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitCenter"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/register"
+
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/logincard"
+        android:layout_width="match_parent"
+        android:layout_height="410dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:id="@+id/siggnupact"
+            android:layout_width="372dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="25dp"
+                android:text="Login!"
+                android:textColor="#710A83"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/loginemail"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_back"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="8dp"
+                android:hint="  Email"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#FF710A83"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/loginPassword"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edit_back"
+                android:drawableLeft="@drawable/baseline_password_24"
+                android:drawablePadding="8dp"
+                android:hint="  Password"
+                android:inputType="textPassword"
+                android:padding="8dp"
+                android:textColor="@color/black"
+                android:textColorHint="#FF710A83"
+                android:textSize="25sp" />
+
+            <Button
+                android:id="@+id/LoginButton"
+                android:layout_width="274dp"
+                android:layout_height="62dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#FF710A83"
+                android:text="LoGin"
+                app:cornerRadius="15dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/siggnupact"
+            android:layout_marginLeft="50dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Not Registered ?"
+            android:textColor="#403B3B"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/goTosignup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+    android:layout_below="@+id/siggnupact"
+            android:layout_toRightOf="@+id/register"
+            android:text=" Sign Up"
+            android:textColor="#FF710A83"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+</LinearLayout>
